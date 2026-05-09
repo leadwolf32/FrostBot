@@ -40,7 +40,7 @@ public class StartCommand extends Command
             f.close();
             prop.clear();
             try {
-                Process p = Runtime.getRuntime().exec("cmd /c start \"\" " + filename, null, new File("" + filepath));
+                Process p = Runtime.getRuntime().exec("C:\\Windows\\System32\\cmd.exe /c start \"\" " + filename, null, new File("" + filepath));
 
                 if(p.isAlive()) {
                     Logger.getGlobal().info(file + " was started.");
